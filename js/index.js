@@ -208,22 +208,26 @@ function blureInput() {
     `
   })
 }
-btnLogin.addEventListener("click", function(){
+btnLogin.addEventListener("click", function () {
   if (ema.value == "" || pass.value == "") {
-      messClear();
-      req.classList.remove("none");
-      return;
+    messClear();
+    req.classList.remove("none");
   }
-  if (ema.value && pass.value) {
-    arrOfUsers=JSON.parse(localStorage.getItem("users"))
+  else {
+    if (localStorage.getItem("users") == null) {
+      messClear();
+      incorr.classList.remove("none")
+    }
+    else {
+      arrOfUsers = JSON.parse(localStorage.getItem("users"));
     let ch = 0;
     let use = "";
-    for (var i = 0; i < arrOfUsers.length; i++){
+    for (let i = 0; i < arrOfUsers.length; i++) {
       if (ema.value == arrOfUsers[i].email && pass.value == arrOfUsers[i].password) {
         ch = 1;
         use = arrOfUsers[i].name;
         break;
-      } 
+      }
     }
     if (ch) {
       spanName.innerHTML = use;
@@ -232,7 +236,7 @@ btnLogin.addEventListener("click", function(){
     } else {
       messClear();
       incorr.classList.remove("none")
-      ch=0
+    }
     }
   }
 })
@@ -242,4 +246,4 @@ logout.addEventListener("click", function () {
   clearInp();
   blureInput();
   messClear();
-})
+});
