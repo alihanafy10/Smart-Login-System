@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <div class="box" id="box">
+    <h1>Smart Login System</h1>
+    <div class="parent-input none" id="div-txt">
+      <label>Enter your name</label>
+      <input type="text" id="text" >
+      <i class="fa-solid fa-check c-green none"></i>
+      <i class="fa-solid fa-exclamation c-red none"></i>
+    </div>
+    <div class="parent-input" >
+      <label >Enter your email</label>
+      <input type="email" id="email">
+      <i class="fa-solid fa-check c-green none"></i>
+      <i class="fa-solid fa-exclamation c-red none"></i>
+    </div>
+    <div class="parent-input" >
+      <label>Enter your password</label>
+      <input type="password" id="pass">
+    </div>
+      <p class="mes none" id="requored">All inputs is required</p>
+      <p class="mes none" id="exists">email already exists</p>
+      <p class="mes none" id="success">Success</p>
+      <p class="mes none" id="incorrect">incorrect email or password</p>
+    <button id="login">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      LOGIN
+    </button>
+    <button class="none" id="signUp">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      Sign Up
+    </button>
+    <p class="end " id="sign-up">Don’t have an account? <a>Sign Up</a></p>
+    <p class="end none" id="sign-in">You have an account? <a>Sign In</a></p>
+  </div>
+  <div id="home" class="none">
+    <div class="nav">
+      <h1>SMART LOGIN</h1>
+      <a id="logout">Logout</a>
+    </div>
+    <div class="contain">Welcom <span id="spanName"></span></div>
+  </div>
+  <script src="js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
